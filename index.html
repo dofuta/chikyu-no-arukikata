@@ -9,10 +9,10 @@
 </head>
 <body>
     <div class="arjs-loader">
-        <div>
-            ロード中
-            <p>デモのため精度に乱れがあります。</p>
-        </div>
+    </div>
+    <div class="searchBack">
+        <img src="/map-5.png" alt="search">
+        <p>地図を映してください</p>
     </div>
     <div class="modal">
         <div class="container">
@@ -62,5 +62,11 @@
         }
         // canvasをクリックしたらモーダルを開く
         document.querySelector('a-scene').addEventListener('click', openModal);
+
+
+        setTimeout(() => {
+            // instruction にフェードアウトクラスを追加
+            document.querySelector('.arjs-loader').classList.add('fadeout');            
+        }, 5000);
     </script>
 </body>

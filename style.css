@@ -1,25 +1,62 @@
 body {
     margin : 0px;
     overflow: hidden;
+    font-family: sans-serif;
+}
+
+
+.searchBack {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s;
+
+    opacity: 1;
+}
+.searchBack.fadeout {
+    pointer-events: none;
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+.searchBack > img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    object-fit: contain;
+}
+.searchBack > p {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .arjs-loader {
-    position: absolute;
-    height: 20%;
-    width: 50%;
-    top: 40%;
-    left: 25%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 5;
+    position: fixed;
+    height: 100vh;
+    height: 100svh;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
-    p {
-        text-align: center;
-        font-family: arial;
-        font-size: 10px;
-        color: white;
-    }
+}
+.arjs-loader  p {
+    text-align: center;
+    font-family: arial;
+    font-size: 10px;
+    color: white;
 }
 .arjs-loader div {
     text-align: center;

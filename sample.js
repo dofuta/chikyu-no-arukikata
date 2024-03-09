@@ -7,10 +7,14 @@ AFRAME.registerComponent('samplehandler', {
 
         marker.addEventListener('markerFound', function () {
             console.log("markerFound...");
+            // instruction にフェードアウトクラスを追加
+            document.querySelector('.searchBack').classList.add('fadeout');        
         }.bind(this));
 
         marker.addEventListener('markerLost', function() {
             console.log("markerLost...");
+            // instruction にフェードアウトクラスを追加
+            document.querySelector('.searchBack').classList.remove('fadeout');
         }.bind(this));
     }
 });
